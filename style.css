@@ -1,4 +1,4 @@
-/* ==========================================
+* ==========================================
    1. ESTILOS GENERALES Y CONFIGURACIÓN
    ========================================== */
 * {
@@ -49,7 +49,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #00bfff; /* Celeste brillante para resaltar */
+    color: rgb(0, 183, 255); /* Celeste brillante para resaltar */
 }
 
 /* ==========================================
@@ -84,7 +84,7 @@ nav a:hover {
 
 .boton-redireccion {
     display: inline-block;
-    background-color: #00bfff;
+    background-color: #955ada;
     color: white;
     padding: 14px 32px;
     text-decoration: none;
@@ -440,4 +440,97 @@ footer {
         width: 100%;
         text-align: center;
     }
+}
+
+
+
+/* ==========================================
+   8. MEJORAS VISUALES ADICIONALES (Andeanstyle)
+   ========================================== */
+
+/* Arreglo para que el contenido no se oculte detrás del menú fijo */
+body {
+    padding-top: 80px; /* Evita que el menú tape los títulos */
+}
+
+/* Enlaces del menú activos o con diseño consistente */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #00bfff;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%; /* Animación de línea inferior al pasar el mouse */
+}
+
+/* Tarjetas de Ropa (.card) optimizadas */
+.card {
+    background: rgba(255, 255, 255, 0.85); /* Fondo claro semi-transparente para alta legibilidad */
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Por si la tarjeta es un enlace <a> */
+    display: block;
+}
+
+/* Corrección de color en textos de tarjetas */
+.card h3 {
+    color: #111111; /* Texto oscuro sobre fondo claro */
+    text-shadow: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.card p {
+    color: #955ada; /* Púrpura elegante para los precios, combinando con tu estilo */
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Efecto Hover Suave y Premium para las Tarjetas */
+.card:hover {
+    transform: translateY(-8px);
+    background: #ffffff; /* Se vuelve blanca sólida para destacar */
+    box-shadow: 0 15px 30px rgba(149, 90, 218, 0.25); /* Sombra con un toque purpura */
+}
+
+/* Asegurar que las imágenes en las tarjetas de ropa no se deformen */
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilización de las tarjetas grandes de inicio (.tarjeta) */
+.tarjeta {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+}
+
+.tarjeta h2 {
+    color: #111;
+    font-weight: 700;
+}
+
+/* Sutiles sombras dinámicas para los inputs del formulario al escribir */
+.grupo-input input:focus, 
+.grupo-input textarea:focus {
+    border-color: #955ada;
+    background-color: #ffffff;
+    box-gradient: 0 0 12px rgba(149, 90, 218, 0.4);
 }
