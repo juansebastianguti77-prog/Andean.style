@@ -1,178 +1,233 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CO">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ropa</title>
+    <title>Ropa - Andean Style</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
-    <nav>
+    <!-- Barra de navegación principal -->
+    <nav class="menu-navegacion">
         <a href="index.html">Inicio</a>
         <a href="Nosotros.html">Nosotros</a>
-        <a href="ropa.html">Ropa</a>
+        <a href="ropa.html" class="activo">Ropa</a>
         <a href="contacto.html">Contacto</a>
     </nav>
 
     <div class="contenedor">
-        <h1>Nueva colección</h1>
-        <p>
-            Explora nuestra ropa urbana con estilo moderno y sostenible.
-        </p>
+        <h1>Nueva Colección</h1>
+        <p>Explora nuestra ropa urbana con estilo moderno, auténtico y sostenible.</p>
 
+        <!-- Productos destacados -->
         <div class="ropa-grid">
-
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=880&auto=format&fit=crop" alt="Camiseta">
-                <h3>Camiseta Oversize</h3>
-                <p>$80.000</p>
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=880&auto=format&fit=crop" alt="Camiseta Oversize Blanca">
+                <h3>Camiseta Oversize Blanca</h3>
+                <p>$80.000 COP</p>
             </div>
-
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=880&auto=format&fit=crop" alt="Hoodie">
-                <h3>Hoodie Urbano</h3>
-                <p>$150.000</p>
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=880&auto=format&fit=crop" alt="Jeans Urban Style">
+                <h3>Jeans Urban Style</h3>
+                <p>$140.000 COP</p>
             </div>
-
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=880&auto=format&fit=crop" alt="Chaqueta">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=880&auto=format&fit=crop" alt="Hoodie Beige">
+                <h3>Hoodie Beige</h3>
+                <p>$160.000 COP</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=880&auto=format&fit=crop" alt="Chaqueta Streetwear">
                 <h3>Chaqueta Streetwear</h3>
-                <p>$210.000</p>
+                <p>$210.000 COP</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=880&auto=format&fit=crop" alt="Camisa Casual">
+                <h3>Camisa Casual</h3>
+                <p>$95.000 COP</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=880&auto=format&fit=crop" alt="Conjunto Moderno">
+                <h3>Conjunto Moderno</h3>
+                <p>$250.000 COP</p>
+            </div>
+        </div>
+
+        <!-- Categorías principales con menús desplegables -->
+        <h2 class="subtitulo-categorias">Explora por categorías</h2>
+        <div class="ropa-grid">
+            <!-- Accesorios -->
+            <div class="card activador-menu" onclick="abrirMenu('menuAccesorios')">
+                <img src="accesorios.20.1.png" alt="Accesorios">
+                <h3>Accesorios</h3>
             </div>
 
+            <!-- Relojes -->
+            <div class="card activador-menu" onclick="abrirMenu('menuRelojes')">
+                <img src="relojes.20.1.png" alt="Relojes">
+                <h3>Relojes</h3>
+            </div>
+
+            <!-- Gorras -->
+            <div class="card activador-menu" onclick="abrirMenu('menuGorras')">
+                <img src="gorras.20.1.png" alt="Gorras">
+                <h3>Gorras</h3>
+            </div>
+
+            <!-- Ropa Hombre -->
+            <div class="card activador-menu" onclick="abrirMenu('menuHombre')">
+                <img src="ropa de hombre.20.1.png" alt="Ropa para Hombre">
+                <h3>Ropa para Hombre</h3>
+            </div>
+
+            <!-- Ropa Mujer -->
+            <div class="card activador-menu" onclick="abrirMenu('menuMujer')">
+                <img src="ropa para mujer.20.1.png" alt="Ropa para Mujer">
+                <h3>Ropa para Mujer</h3>
+            </div>
+
+            <!-- Zapatos -->
+            <div class="card activador-menu" onclick="abrirMenu('menuZapatos')">
+                <img src="zapatos..20.1.png" alt="Zapatos">
+                <h3>Zapatos</h3>
+            </div>
         </div>
     </div>
 
-</body>
-</html>
+    <!-- Fondo oscuro común -->
+    <div id="fondoOscuro" class="fondo-oscuro" onclick="cerrarTodosMenus()"></div>
 
-<div class="ropa-grid">
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Camiseta Oversize Blanca</h3>
-        <p>$80.000</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Jeans Urban Style</h3>
-        <p>$140.000</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Hoodie Beige</h3>
-        <p>$160.000</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Chaqueta Streetwear</h3>
-        <p>$210.000</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Camisa Casual</h3>
-        <p>$95.000</p>
-    </div>
-
-    <div class="card">
-        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=880&auto=format&fit=crop" alt="">
-        <h3>Conjunto Moderno</h3>
-        <p>$250.000</p>
-
-    </div>
-    </div>
-
-</div>
-
-<div class="ropa-grid">
-    <div class="card">
-        <img src="accesorios 1 .png" alt="">
-        <h3>Accesorios</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="relojes.png" alt="">
-        <h3>Relojes</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="gorras.png" alt="">
-        <h3>Gorras</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="Toda ropa para hombre.png" alt="">
-        <h3>Toda la ropa para hombre</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="toda ropa para mujer.png" alt="">
-        <h3>Toda la ropa para mujer</h3>
-        <p></p>
-    </div>
-
-    <div class="card">
-        <img src="zapatos .png" alt="">
-        <h3>Zapatos</h3>
-        <p></p>
-    </div>
-
-</div>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andeanstyle</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <h1 class="titulo">ANDEANSTYLE</h1>
-
-    <div class="contenedor">
-
-        <a href="accesorios.html" class="card">
-            <img src="accesorios.20.1.png" alt="">
+    <!-- ==========================================
+         MENÚ LATERAL: ACCESORIOS
+    ========================================== -->
+    <div id="menuAccesorios" class="menu-lateral">
+        <div class="encabezado-menu">
             <h3>Accesorios</h3>
-        </a>
-
-        <a href="relojes.html" class="card">
-            <img src="relojes.20.1.png" alt="">
-            <h3>Relojes</h3>
-        </a>
-
-        <a href="gorras.html" class="card">
-            <img src="gorras.20.1.png" alt="">
-            <h3>Gorras</h3>
-        </a>
-
-        <a href="hombre.html" class="card">
-            <img src="ropa de hombre.20.1.png" alt="">
-            <h3>Toda la ropa para hombre</h3>
-        </a>
-
-        <a href="mujer.html" class="card">
-            <img src="ropa para mujer.20.1.png" alt="">
-            <h3>Toda la ropa para mujer</h3>
-        </a>
-
-        <a href="originales.html" class="card">
-            <img src="originales.20.1.png" alt="">
-            <h3>Originales</h3>
-        </a>
-
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="accesorios.ropa.html" class="item-menu">Todos los accesorios</a>
+            <a href="termos.html" class="item-menu">Termos</a>
+            <a href="billeteras.html" class="item-menu">Billeteras</a>
+            <a href="gafas.html" class="item-menu">Gafas</a>
+            <a href="perfumes.html" class="item-menu">Perfumes</a>
+            <a href="correas.html" class="item-menu">Correas</a>
+            <a href="gorras.html" class="item-menu">Gorras</a>
+            <a href="morrales.html" class="item-menu">Morrales, Maletas y Canguros</a>
+        </div>
     </div>
 
+    <!-- ==========================================
+         MENÚ LATERAL: RELOJES
+    ========================================== -->
+    <div id="menuRelojes" class="menu-lateral">
+        <div class="encabezado-menu">
+            <h3>Relojes</h3>
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="relojes.html" class="item-menu">Todos los relojes</a>
+            <a href="relojes-hombre.html" class="item-menu">Para Hombre</a>
+            <a href="relojes-mujer.html" class="item-menu">Para Mujer</a>
+            <a href="relojes-deportivos.html" class="item-menu">Deportivos</a>
+            <a href="relojes-clasicos.html" class="item-menu">Clásicos</a>
+            <a href="relojes-inteligentes.html" class="item-menu">Inteligentes</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENÚ LATERAL: GORRAS
+    ========================================== -->
+    <div id="menuGorras" class="menu-lateral">
+        <div class="encabezado-menu">
+            <h3>Gorras</h3>
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="gorras.html" class="item-menu">Todas las gorras</a>
+            <a href="gorras-curvas.html" class="item-menu">Visera Curva</a>
+            <a href="gorras-planas.html" class="item-menu">Visera Plana</a>
+            <a href="gorras-sin-visera.html" class="item-menu">Sin Visera</a>
+            <a href="gorras-invierno.html" class="item-menu">Para Invierno</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENÚ LATERAL: ROPA HOMBRE
+    ========================================== -->
+    <div id="menuHombre" class="menu-lateral">
+        <div class="encabezado-menu">
+            <h3>Ropa Hombre</h3>
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="hombre.html" class="item-menu">Toda la colección</a>
+            <a href="hombre-camisetas.html" class="item-menu">Camisetas</a>
+            <a href="hombre-jeans.html" class="item-menu">Jeans</a>
+            <a href="hombre-hoodies.html" class="item-menu">Hoodies / Sudaderas</a>
+            <a href="hombre-chaquetas.html" class="item-menu">Chaquetas</a>
+            <a href="hombre-camisas.html" class="item-menu">Camisas</a>
+            <a href="hombre-pantalones.html" class="item-menu">Pantalones</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENÚ LATERAL: ROPA MUJER
+    ========================================== -->
+    <div id="menuMujer" class="menu-lateral">
+        <div class="encabezado-menu">
+            <h3>Ropa Mujer</h3>
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="mujer.html" class="item-menu">Toda la colección</a>
+            <a href="mujer-vestidos.html" class="item-menu">Vestidos</a>
+            <a href="mujer-blusas.html" class="item-menu">Blusas</a>
+            <a href="mujer-pantalones.html" class="item-menu">Pantalones</a>
+            <a href="mujer-faldas.html" class="item-menu">Faldas</a>
+            <a href="mujer-chaquetas.html" class="item-menu">Chaquetas</a>
+            <a href="mujer-conjuntos.html" class="item-menu">Conjuntos</a>
+        </div>
+    </div>
+
+    <!-- ==========================================
+         MENÚ LATERAL: ZAPATOS
+    ========================================== -->
+    <div id="menuZapatos" class="menu-lateral">
+        <div class="encabezado-menu">
+            <h3>Zapatos</h3>
+            <span class="cerrar-menu" onclick="cerrarTodosMenus()">&times;</span>
+        </div>
+        <div class="contenido-menu">
+            <a href="zapatos.html" class="item-menu">Todos los zapatos</a>
+            <a href="zapatos-hombre.html" class="item-menu">Para Hombre</a>
+            <a href="zapatos-mujer.html" class="item-menu">Para Mujer</a>
+            <a href="zapatos-deportivos.html" class="item-menu">Deportivos</a>
+            <a href="zapatos-casual.html" class="item-menu">Casuales</a>
+            <a href="zapatos-botas.html" class="item-menu">Botas</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Andeanstyle - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Script para abrir y cerrar menús -->
+    <script>
+        function abrirMenu(idMenu) {
+            cerrarTodosMenus(); // Cierra cualquier otro que esté abierto
+            document.getElementById(idMenu).style.left = "0";
+            document.getElementById("fondoOscuro").style.display = "block";
+            document.body.style.overflow = "hidden";
+        }
+
+        function cerrarTodosMenus() {
+            const menus = document.querySelectorAll(".menu-lateral");
+            menus.forEach(menu => menu.style.left = "-320px");
+            document.getElementById("fondoOscuro").style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
 </body>
 </html>
