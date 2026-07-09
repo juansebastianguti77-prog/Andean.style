@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesorios - Andean Style</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="menu-navegacion">
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="ropa.html" class="activo">Ropa</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="pagina-accesorios">
+        <!-- Encabezado con imagen de portada -->
+        <div class="encabezado-accesorios">
+            <h1></h1>
+        </div>
+
+        <div class="contenedor-accesorios">
+            <!-- Barra lateral de filtros -->
+            <aside class="filtros-lateral">
+                <h3>Disponibilidad</h3>
+                <div class="filtro-grupo">
+                    <label><input type="checkbox"> En existencia (38)</label>
+                    <label><input type="checkbox"> Agotado (2)</label>
+                </div>
+
+                <h3>Tipo</h3>
+                <div class="filtro-grupo">
+                    <label><input type="checkbox"> Canguro (3)</label>
+                    <label><input type="checkbox"> Correa (3)</label>
+                    <label><input type="checkbox"> Correa de Cuero (3)</label>
+                    <label><input type="checkbox"> Gafas Brillantes (1)</label>
+                    <label><input type="checkbox"> Gafas Cuadradas (1)</label>
+                    <label><input type="checkbox"> Gafas Deportivas (2)</label>
+                    <label><input type="checkbox"> Gafas Mate (1)</label>
+                    <label><input type="checkbox"> Morrales (3)</label>
+                    <label><input type="checkbox"> Perfumes (2)</label>
+                </div>
+
+                <h3>Talla</h3>
+                <div class="filtro-grupo">
+                    <label><input type="checkbox"> 06 (2)</label>
+                    <label><input type="checkbox"> 07 (2)</label>
+                    <label><input type="checkbox"> Única</label>
+                </div>
+            </aside>
+
+            <!-- Sección de productos -->
+            <main>
+                <!-- Controles de vista + Botón Volver ARRIBA -->
+                <div class="controles-vista">
+                    <div class="botones-vista">
+                        <button class="boton-vista" onclick="cambiarVista(2)">
+                            <i class="fa-solid fa-grip-vertical"></i>
+                        </button>
+                        <button class="boton-vista activo" onclick="cambiarVista(3)">
+                            <i class="fa-solid fa-grip"></i>
+                        </button>
+                        <button class="boton-vista" onclick="cambiarVista(4)">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </button>
+
+                        <!-- ✅ BOTÓN DE VOLVER EN LA PARTE SUPERIOR -->
+                        <a href="ropa.html" class="boton-volver">
+                            <i class="fa-solid fa-arrow-left"></i> Volver a categorías
+                        </a>
+                    </div>
+
+                    <select class="ordenar-select">
+                    
+                    
+                        <option>Precio: Mayor a Menor</option>
+                        <option>Precio: Menor a Mayor</option>
+                        <option>Nombre: A-Z</option>
+                    </select>
+                </div>
+
+                <!-- Cuadrícula de productos -->
+                <div class="grid-productos" id="gridProductos">
+                    <!-- Producto 1 -->
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="canguro negro.png" alt="Frente Canguro Negro" class="img-frente">
+                            <img src="canguro negro trasera.png" alt="Atrás Canguro Negro" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Canguro Negro</h3>
+                            <p class="producto-precio">$129.900 COP</p>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="canguro azul.png" alt="Frente Canguro Negro" class="img-frente">
+                            <img src="canguro azul trasera.png" alt="Atrás Canguro Negro" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Canguro azul oscuro</h3>
+                            <p class="producto-precio">$111.900 COP</p>
+                        </div>
+                    </div>
+
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="canguro verde.png" alt="Frente Canguro Negro" class="img-frente">
+                            <img src="canguro verde trasera.png" alt="Atrás Canguro Negro" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Canguro verde</h3>
+                            <p class="producto-precio">$109.900 COP</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="perfume  Ikhtiyar.jpeg" alt="Frente Perfume Roott+Co" class="img-frente">
+                            <img src="Ikhtiyar.jpeg" alt="Atrás Perfume Roott+Co" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Perfume Ikhtiyar</h3>
+                            <p class="producto-precio">$89.900 COP</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="morral-blanco.jpg" alt="Frente Morral Blanco" class="img-frente">
+                            <img src="morral-blanco-atras.jpg" alt="Atrás Morral Blanco" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Morral Pequeño Blanco Mujer</h3>
+                            <p class="producto-precio">$99.900 COP</p>
+                        </div>
+                    </div>
+
+                    <!-- Más productos -->
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="correa-cuero.jpg" alt="Frente Correa Cuero" class="img-frente">
+                            <img src="correa-cuero-atras.jpg" alt="Atrás Correa Cuero" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Correa de Cuero</h3>
+                            <p class="producto-precio">$59.900 COP</p>
+                        </div>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="gafas-deportivas.jpg" alt="Frente Gafas Deportivas" class="img-frente">
+                            <img src="gafas-deportivas-atras.jpg" alt="Atrás Gafas Deportivas" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Gafas Deportivas</h3>
+                            <p class="producto-precio">$79.900 COP</p>
+                        </div>
+                    </div>
+                    <div class="producto-card">
+                        <div class="producto-imagenes">
+                            <img src="billetera-negra.jpg" alt="Frente Billetera Negra" class="img-frente">
+                            <img src="billetera-negra-atras.jpg" alt="Atrás Billetera Negra" class="img-atras">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Billetera Negra</h3>
+                            <p class="producto-precio">$45.900 COP</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 Andeanstyle - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Script para cambiar vista -->
+    <script>
+        function cambiarVista(columnas) {
+            const grid = document.getElementById("gridProductos");
+            const botones = document.querySelectorAll(".boton-vista");
+            
+            botones.forEach(btn => btn.classList.remove("activo"));
+            
+            if (columnas === 2) {
+                grid.className = "grid-productos vista-2";
+                botones[0].classList.add("activo");
+            } else if (columnas === 3) {
+                grid.className = "grid-productos";
+                botones[1].classList.add("activo");
+            } else if (columnas === 4) {
+                grid.className = "grid-productos vista-4";
+                botones[2].classList.add("activo");
+            }
+        }
+    </script>
+</body>
+</html>

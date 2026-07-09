@@ -630,3 +630,310 @@ footer {
         left: -88%;
     }
 }
+/* ==========================================
+   ESTILOS PARA LA PÁGINA DE ACCESORIOS
+   ========================================== */
+
+/* Fondo general de la página */
+.pagina-accesorios {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 90px;
+    min-height: 100vh;
+}
+
+/* Encabezado con imagen de portada */
+.encabezado-accesorios {
+    width: 100%;
+    height: 280px;
+    background: linear-gradient(rgba(255, 255, 255, 0.089), rgba(255, 255, 255, 0)), url("accesorios-banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.encabezado-accesorios h1 {
+    font-size: 52px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* Contenedor principal (filtros + productos) */
+.contenedor-accesorios {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 35px;
+}
+
+/* Barra lateral de filtros */
+.filtros-lateral {
+    background-color: #111111;
+    padding: 25px;
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.filtros-lateral h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filtro-grupo {
+    margin-bottom: 25px;
+}
+
+.filtro-grupo label {
+    display: block;
+    color: #dddddd;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-size: 15px;
+}
+
+.filtro-grupo label:hover {
+    color: #955ada;
+}
+
+.filtro-grupo input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Controles de vista y botón volver */
+.controles-vista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px 20px;
+    background-color: #121212;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.botones-vista {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.boton-vista {
+    background-color: #222222;
+    border: none;
+    color: #ffffff;
+    width: 42px;
+    height: 42px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.25s ease;
+}
+
+.boton-vista.activo,
+.boton-vista:hover {
+    background-color: #955ada;
+    box-shadow: 0 0 8px rgba(149, 90, 218, 0.4);
+}
+
+.ordenar-select {
+    background-color: #222222;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 8px 12px;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    transition: border 0.2s ease;
+}
+
+.ordenar-select:focus {
+    border-color: #955ada;
+}
+
+/* Botón para volver arriba */
+.boton-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    border: 1px solid #333;
+}
+
+.boton-volver:hover {
+    background-color: #955ada;
+    border-color: #955ada;
+    color: #ffffff;
+    transform: translateX(-2px);
+    box-shadow: 0 0 8px rgba(149, 90, 218, 0.3);
+}
+
+.boton-volver i {
+    font-size: 15px;
+}
+
+/* Cuadrícula de productos */
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+    transition: grid-template-columns 0.3s ease;
+}
+
+.grid-productos.vista-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-productos.vista-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Tarjeta de cada producto */
+.producto-card {
+    background-color: #111111;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(149, 90, 218, 0.25);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-info {
+    padding: 18px;
+    text-align: center;
+}
+
+.producto-info h3 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.producto-precio {
+    color: #5a96dadc;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ==========================================
+   ADAPTACIÓN RESPONSIVA
+   ========================================== */
+@media (max-width: 992px) {
+    .contenedor-accesorios {
+        grid-template-columns: 1fr;
+    }
+
+    .filtros-lateral {
+        order: 2;
+    }
+
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-productos.vista-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .encabezado-accesorios {
+        height: 200px;
+    }
+
+    .encabezado-accesorios h1 {
+        font-size: 36px;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-card img {
+        height: 240px;
+    }
+
+    .controles-vista {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+/* Contenedor de las dos imágenes */
+.producto-imagenes {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+}
+
+/* Ambas imágenes con mismo tamaño */
+.producto-imagenes img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Imagen de atrás oculta por defecto */
+.img-atras {
+    opacity: 0;
+}
+
+/* Al pasar el cursor → mostrar imagen de atrás */
+.producto-card:hover .img-frente {
+    opacity: 0;
+}
+
+.producto-card:hover .img-atras {
+    opacity: 1;
+}
+
+/* También funciona al hacer clic en móviles */
+.producto-card:active .img-frente {
+    opacity: 0;
+}
+
+.producto-card:active .img-atras {
+    opacity: 1;
+}
